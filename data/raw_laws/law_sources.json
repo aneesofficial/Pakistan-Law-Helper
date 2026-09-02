@@ -1,0 +1,110 @@
+[
+  {
+    "law_name": "Constitution of the Islamic Republic of Pakistan",
+    "year": 1973,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice (via NA)",
+    "source_url": "https://na.gov.pk/uploads/documents/1333523681_951.pdf",
+    "local_file": "constitution_1973.pdf",
+    "downloaded_successfully": true
+  },
+  {
+    "law_name": "Pakistan Penal Code",
+    "year": 1860,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "pakistan_penal_code_1860.pdf",
+    "downloaded_successfully": false
+  },
+  {
+    "law_name": "Code of Criminal Procedure",
+    "year": 1898,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "code_criminal_procedure_1898.pdf",
+    "downloaded_successfully": false
+  },
+  {
+    "law_name": "Code of Civil Procedure",
+    "year": 1908,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "code_civil_procedure_1908.pdf",
+    "downloaded_successfully": false
+  },
+  {
+    "law_name": "Contract Act",
+    "year": 1872,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "contract_act_1872.pdf",
+    "downloaded_successfully": false
+  },
+  {
+    "law_name": "Qanun-e-Shahadat Order",
+    "year": 1984,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "qanun_e_shahadat_1984.pdf",
+    "downloaded_successfully": false
+  },
+  {
+    "law_name": "Anti-Terrorism Act",
+    "year": 1997,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "anti_terrorism_act_1997.pdf",
+    "downloaded_successfully": false
+  },
+  {
+    "law_name": "Anti-Money Laundering Act",
+    "year": 2010,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "anti_money_laundering_act_2010.pdf",
+    "downloaded_successfully": false
+  },
+  {
+    "law_name": "Prevention of Electronic Crimes Act",
+    "year": 2016,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "prevention_electronic_crimes_act_2016.pdf",
+    "downloaded_successfully": false
+  },
+  {
+    "law_name": "Muslim Family Laws Ordinance",
+    "year": 1961,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "muslim_family_laws_ordinance_1961.pdf",
+    "downloaded_successfully": false
+  },
+  {
+    "law_name": "Civil Servants Act",
+    "year": 1973,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "civil_servants_act_1973.pdf",
+    "downloaded_successfully": false
+  },
+  {
+    "law_name": "Income Tax Ordinance",
+    "year": 2001,
+    "province": "Federal",
+    "source_name": "Pakistan Code / Ministry of Law & Justice",
+    "source_url": "Unavailable directly",
+    "local_file": "income_tax_ordinance_2001.pdf",
+    "downloaded_successfully": false
+  }
+]

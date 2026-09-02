@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "question": "What does the Constitution say about the fundamental rights of citizens?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "8",
+    "notes": "Chapter 1 on Fundamental Rights"
+  },
+  {
+    "id": 2,
+    "question": "Does a person have the right to a fair trial?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "10A",
+    "notes": "Right to fair trial"
+  },
+  {
+    "id": 3,
+    "question": "What is the official state religion of Pakistan?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "2",
+    "notes": "Islam to be State religion"
+  },
+  {
+    "id": 4,
+    "question": "Can a person be punished for an act that was not illegal at the time it was committed?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "12",
+    "notes": "Protection against retrospective punishment"
+  },
+  {
+    "id": 5,
+    "question": "What are the rules regarding preventive detention?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "10",
+    "notes": "Safeguards as to arrest and detention"
+  },
+  {
+    "id": 6,
+    "question": "Is slavery or forced labor allowed in Pakistan?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "11",
+    "notes": "Slavery, forced labour, etc., prohibited"
+  },
+  {
+    "id": 7,
+    "question": "Do citizens have the freedom of speech and expression?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "19",
+    "notes": "Freedom of speech, etc."
+  },
+  {
+    "id": 8,
+    "question": "What is the right to information?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "19A",
+    "notes": "Right to information"
+  },
+  {
+    "id": 9,
+    "question": "Are all citizens equal before the law?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "25",
+    "notes": "Equality of citizens"
+  },
+  {
+    "id": 10,
+    "question": "What does the state provide for free and compulsory education?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "25A",
+    "notes": "Right to education"
+  },
+  {
+    "id": 11,
+    "question": "Is there freedom to profess religion and manage religious institutions?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "20",
+    "notes": "Freedom to profess religion"
+  },
+  {
+    "id": 12,
+    "question": "Can citizens form associations or unions?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "17",
+    "notes": "Freedom of association"
+  },
+  {
+    "id": 13,
+    "question": "Who is the Head of State?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "41",
+    "notes": "The President"
+  },
+  {
+    "id": 14,
+    "question": "What is the composition of the Parliament?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "50",
+    "notes": "Majlis-e-Shoora (Parliament)"
+  },
+  {
+    "id": 15,
+    "question": "What is the jurisdiction of the Supreme Court?",
+    "province": "Federal",
+    "expected_law": "Constitution of the Islamic Republic of Pakistan",
+    "expected_section": "175",
+    "notes": "Establishment and jurisdiction of courts"
+  },
+  {
+    "id": 16,
+    "question": "What is the legal speed limit on highways?",
+    "province": "Federal",
+    "expected_law": "Unknown",
+    "expected_section": "Unknown",
+    "notes": "UNKNOWN QUESTION: Motor Vehicle laws not included in dataset."
+  },
+  {
+    "id": 17,
+    "question": "How do I file a divorce under the Hindu Marriage Act?",
+    "province": "Federal",
+    "expected_law": "Unknown",
+    "expected_section": "Unknown",
+    "notes": "UNKNOWN QUESTION: Hindu Marriage Act not included in dataset."
+  },
+  {
+    "id": 18,
+    "question": "What are the building regulations for commercial plazas in Karachi?",
+    "province": "Sindh",
+    "expected_law": "Unknown",
+    "expected_section": "Unknown",
+    "notes": "UNKNOWN QUESTION: Local municipal laws not included."
+  },
+  {
+    "id": 19,
+    "question": "What is the penalty for cyber terrorism?",
+    "province": "Federal",
+    "expected_law": "Unknown",
+    "expected_section": "Unknown",
+    "notes": "UNKNOWN QUESTION: PECA not successfully downloaded."
+  }
+]

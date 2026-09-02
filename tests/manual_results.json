@@ -1,0 +1,266 @@
+[
+  {
+    "id": 1,
+    "question": "What does the Constitution say about the fundamental rights of citizens?",
+    "expected_section": "8",
+    "top_5_sections": [
+      "7",
+      "Preamble",
+      "1",
+      "2A",
+      "6"
+    ],
+    "expected_in_top_5": false,
+    "status": "FAIL"
+  },
+  {
+    "id": 2,
+    "question": "Does a person have the right to a fair trial?",
+    "expected_section": "10A",
+    "top_5_sections": [
+      "10A",
+      "Preamble",
+      "7",
+      "1",
+      "2A"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  },
+  {
+    "id": 3,
+    "question": "What is the official state religion of Pakistan?",
+    "expected_section": "2",
+    "top_5_sections": [
+      "Preamble",
+      "2",
+      "7",
+      "40",
+      "1"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  },
+  {
+    "id": 4,
+    "question": "Can a person be punished for an act that was not illegal at the time it was committed?",
+    "expected_section": "12",
+    "top_5_sections": [
+      "Preamble",
+      "2A",
+      "1",
+      "7",
+      "9"
+    ],
+    "expected_in_top_5": false,
+    "status": "FAIL"
+  },
+  {
+    "id": 5,
+    "question": "What are the rules regarding preventive detention?",
+    "expected_section": "10",
+    "top_5_sections": [
+      "Preamble",
+      "1",
+      "2A",
+      "7",
+      "10"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  },
+  {
+    "id": 6,
+    "question": "Is slavery or forced labor allowed in Pakistan?",
+    "expected_section": "11",
+    "top_5_sections": [
+      "11",
+      "Preamble",
+      "40",
+      "1",
+      "2"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  },
+  {
+    "id": 7,
+    "question": "Do citizens have the freedom of speech and expression?",
+    "expected_section": "19",
+    "top_5_sections": [
+      "Preamble",
+      "1",
+      "19",
+      "20",
+      "33"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  },
+  {
+    "id": 8,
+    "question": "What is the right to information?",
+    "expected_section": "19A",
+    "top_5_sections": [
+      "7",
+      "19A",
+      "Preamble",
+      "1",
+      "2A"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  },
+  {
+    "id": 9,
+    "question": "Are all citizens equal before the law?",
+    "expected_section": "25",
+    "top_5_sections": [
+      "Preamble",
+      "25A",
+      "1",
+      "2A",
+      "4"
+    ],
+    "expected_in_top_5": false,
+    "status": "FAIL"
+  },
+  {
+    "id": 10,
+    "question": "What does the state provide for free and compulsory education?",
+    "expected_section": "25A",
+    "top_5_sections": [
+      "Preamble",
+      "1",
+      "2A",
+      "5",
+      "7"
+    ],
+    "expected_in_top_5": false,
+    "status": "FAIL"
+  },
+  {
+    "id": 11,
+    "question": "Is there freedom to profess religion and manage religious institutions?",
+    "expected_section": "20",
+    "top_5_sections": [
+      "20",
+      "Preamble",
+      "18",
+      "22",
+      "1"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  },
+  {
+    "id": 12,
+    "question": "Can citizens form associations or unions?",
+    "expected_section": "17",
+    "top_5_sections": [
+      "2A",
+      "19A",
+      "25A"
+    ],
+    "expected_in_top_5": false,
+    "status": "FAIL"
+  },
+  {
+    "id": 13,
+    "question": "Who is the Head of State?",
+    "expected_section": "41",
+    "top_5_sections": [
+      "7",
+      "Preamble",
+      "1",
+      "2",
+      "2A"
+    ],
+    "expected_in_top_5": false,
+    "status": "FAIL"
+  },
+  {
+    "id": 14,
+    "question": "What is the composition of the Parliament?",
+    "expected_section": "50",
+    "top_5_sections": [
+      "Preamble",
+      "1",
+      "2A",
+      "7",
+      "33"
+    ],
+    "expected_in_top_5": false,
+    "status": "FAIL"
+  },
+  {
+    "id": 15,
+    "question": "What is the jurisdiction of the Supreme Court?",
+    "expected_section": "175",
+    "top_5_sections": [
+      "Preamble",
+      "1",
+      "2A",
+      "7",
+      "33"
+    ],
+    "expected_in_top_5": false,
+    "status": "FAIL"
+  },
+  {
+    "id": 16,
+    "question": "What is the legal speed limit on highways?",
+    "expected_section": "Unknown",
+    "top_5_sections": [
+      "Preamble",
+      "1",
+      "2A",
+      "7",
+      "33"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  },
+  {
+    "id": 17,
+    "question": "How do I file a divorce under the Hindu Marriage Act?",
+    "expected_section": "Unknown",
+    "top_5_sections": [
+      "Preamble",
+      "1",
+      "2A",
+      "7",
+      "33"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  },
+  {
+    "id": 18,
+    "question": "What are the building regulations for commercial plazas in Karachi?",
+    "expected_section": "Unknown",
+    "top_5_sections": [
+      "2A",
+      "Preamble",
+      "1",
+      "7",
+      "11"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  },
+  {
+    "id": 19,
+    "question": "What is the penalty for cyber terrorism?",
+    "expected_section": "Unknown",
+    "top_5_sections": [
+      "2A",
+      "Preamble",
+      "1",
+      "7",
+      "11"
+    ],
+    "expected_in_top_5": true,
+    "status": "PASS"
+  }
+]

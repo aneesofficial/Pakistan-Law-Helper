@@ -1,21 +1,18 @@
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Python compiled files
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+venv/
+.env
 
-# Streamlit
-.streamlit/
+# Next.js / Node
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
 
-# Temporary/debug files
-process_output.txt
-temp*.txt
-investigate_pdf.py
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE Files
+.vscode/
+.idea/

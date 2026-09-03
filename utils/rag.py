@@ -105,7 +105,7 @@ def answer_question(question: str, province: str) -> Tuple[str, List[Dict[str, A
             fallback_answer = (
                 f"**Service Error:** {e}\n\n"
                 "---\n\n"
-                "### ⚠️ Local Fallback Answer\n"
+                "### Local Fallback Answer\n"
                 "The AI service is temporarily unavailable. However, based on the locally retrieved legal texts, here is the relevant information:\n\n"
             )
             for sec in top_sections:

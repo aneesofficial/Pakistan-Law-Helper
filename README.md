@@ -1,48 +1,49 @@
-# Pakistan Law Helper ⚖️
+# Pakistan Law Helper
 
-A Generative AI-powered legal research assistant designed to answer questions using an offline, indexed dataset of Pakistani law sources. The system processes legal queries, retrieves highly relevant local legal provisions, and synthesizes answers with strict citation validation in simple English or Urdu.
+Pakistan Law Helper — AI-powered legal research assistant for Pakistani law, built with Next.js, FastAPI, and a local RAG pipeline.
 
-## 🌟 Project Overview
+## Overview
+Pakistan Law Helper is an intelligent, highly localized search engine and Q&A system for Pakistani legislation. Navigating complex legal documents like the Constitution of Pakistan or provincial laws can be tedious. This system helps legal professionals, students, and citizens ask natural language questions about the law and receive grounded, accurate answers backed by precise citations.
 
-**Problem It Solves:** 
-Navigating complex legal documents is traditionally tedious and inaccessible for the general public. While public LLMs (like ChatGPT or standard Gemini) can provide general answers, they frequently hallucinate legal sections or mix up jurisdictions (e.g., confusing federal law with provincial law). Pakistan Law Helper solves this by securely matching user queries strictly against an offline index of verified legal sections, using AI only for final answer synthesis and translation.
+By leveraging a local Retrieval-Augmented Generation (RAG) pipeline with hybrid search (TF-IDF keyword matching + semantic vector search), the application guarantees that AI responses are strictly grounded in actual legal text.
 
-**Main Features:**
-- 🏛️ **Jurisdiction Filtering:** Accurately separates Federal laws from Provincial laws (Punjab, Sindh, KPK, Balochistan).
-- 🔍 **Hybrid Local Search:** Combines semantic (TF-IDF Cosine Similarity) and keyword search for high-accuracy retrieval without external API costs.
-- 🛡️ **Anti-Hallucination Validation:** A strict validation layer intercepts the AI's response to ensure any cited sections actually exist in the retrieved local documents.
-- 💬 **Multilingual Support:** Asks and answers questions seamlessly in English or Roman Urdu.
-- 🖥️ **Professional UI:** A responsive, modern dashboard built with Streamlit.
+## Screenshots
 
----
+### Homepage
+![Homepage](screenshots/homepage.png)
 
-## 🏗️ Architecture & Tech Stack
+### Legal Analysis Result
+![Legal Analysis](screenshots/legal-analysis.png)
 
-This project utilizes a **Retrieval-Augmented Generation (RAG)** architecture.
+## Architecture & Tech Stack
+* **Frontend:** Next.js (React), TypeScript, Tailwind CSS, Lucide React
+* **Backend:** FastAPI, Python, Pydantic, Uvicorn
+* **AI & RAG Pipeline:** 
+  * **LLM:** Google Gemini (`gemini-3.6-flash`) for answer synthesis
+  * **Retrieval:** FAISS vector store, `sentence-transformers/all-MiniLM-L6-v2`
+  * **Search:** Hybrid approach combining TF-IDF keyword search with dense semantic retrieval
 
-1. **Local Vector Retrieval Approach:** To completely bypass external embedding API limits and costs, the system uses `scikit-learn`'s `TfidfVectorizer` to build a local semantic space. It calculates the cosine similarity between the user's query and thousands of chunked legal sections.
-2. **Hybrid Search:** The retrieval engine (`utils/search.py`) combines the TF-IDF semantic scores with a weighted keyword frequency algorithm (prioritizing matches in the Law Title) to fetch the top `K` most relevant sections.
-3. **Gemini's Role:** Google's `gemini-3.6-flash` is strictly utilized as a generative reasoning engine. It does not search the internet; it is only fed the retrieved local context and asked to synthesize a human-readable answer.
-4. **Source Validation:** The system parses the AI's output using Regex to extract cited section numbers. If the AI cites a section not present in the retrieved local context, the system injects a visible warning alerting the user of a potential hallucination.
+## Project Structure
+```text
+Pakistan-Law-Helper/
+├── backend/          # FastAPI server, endpoints, request/response models
+├── data/             # Processed legal documents and FAISS vector indices
+├── frontend/         # Next.js web application and UI components
+├── prompts/          # System prompts for the Gemini model
+├── screenshots/      # Application screenshots for documentation
+├── tests/            # Python unittests for RAG and API logic
+├── utils/            # Core RAG logic, Gemini client, search & vector tools
+├── .env.example      # Example environment variables for the backend
+├── requirements.txt  # Python dependencies
+└── README.md         # Project documentation
+```
 
-**Tech Stack:**
-- **Language:** Python 3.8+
-- **Frontend:** Streamlit
-- **AI/LLM:** Google GenAI SDK (`gemini-3.6-flash`)
-- **Data Processing:** `pdfplumber`, Regex
-- **Search Engine:** `scikit-learn` (TF-IDF), `numpy`
+## Setup & Installation
 
----
+### 1. Backend Setup
+Ensure you have Python 3.9+ installed.
 
-## 🚀 Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone <your-repo-link>
-   cd Pakistan-Law-Helper
-   ```
-
-2. **Create a virtual environment (Recommended):**
+1. Create and activate a virtual environment:
    ```bash
    python -m venv venv
    # Windows:
@@ -50,41 +51,88 @@ This project utilizes a **Retrieval-Augmented Generation (RAG)** architecture.
    # macOS/Linux:
    source venv/bin/activate
    ```
-
-3. **Install Dependencies:**
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
+3. Set up environment variables (see [Environment Variables](#environment-variables) section below).
+4. Start the FastAPI server:
+   ```bash
+   python -m uvicorn backend.main:app --reload
+   ```
+   The backend will be available at `http://localhost:8000`.
 
-4. **Environment Variables (`.env` setup):**
-   - Copy the provided template: `cp .env.example .env`
-   - Open `.env` and add your Gemini API Key:
-     ```env
-     GEMINI_API_KEY=your_actual_api_key_here
-     ```
-   - *Note: Ensure your `.env` file is never committed to GitHub. It is already included in `.gitignore`.*
+### 2. Frontend Setup
+Ensure you have Node.js 18+ installed.
 
----
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up environment variables (copy `.env.local.example` to `.env.local`).
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   The frontend will be available at `http://localhost:3000`.
 
-## ⚙️ How to Run the Application
+## Environment Variables
 
-Once dependencies are installed and the API key is configured, start the Streamlit dashboard:
-
-```bash
-streamlit run app.py
+### Backend
+Create a `.env` file in the root of the project (you can copy `.env.example`):
+```env
+GEMINI_API_KEY="your-google-ai-studio-api-key"
 ```
 
-The application will automatically open in your default web browser at `http://localhost:8501`.
+### Frontend
+Create a `.env.local` file inside the `frontend/` directory (you can copy `frontend/.env.local.example`):
+```env
+NEXT_PUBLIC_API_URL="http://localhost:8000"
+```
 
----
+## API Endpoints
+The FastAPI backend exposes the following endpoints:
 
-## ⚠️ Known Limitations
+* **`GET /api/health`**
+  Checks if the API is running.
 
-- **Dataset Scope:** The offline index provided in this repository is a curated subset of laws (e.g., Constitution, PECA, specific family laws) used for demonstration purposes. **It does not contain all Pakistani laws.** The AI can only answer questions related to the documents present in `data/clean_laws/`.
-- **Lexical Limitations:** While TF-IDF is highly efficient and runs locally without API limits, it relies on lexical overlap and statistical frequency. Extremely complex semantic queries might require exact keyword matches compared to heavy dense-vector embedding models.
+* **`POST /api/ask`**
+  Retrieves legal context and generates an answer.
+  **Request Body:**
+  ```json
+  {
+    "question": "What is Article 14 of the Constitution?",
+    "province": "Federal"
+  }
+  ```
+  **Response:**
+  ```json
+  {
+    "answer": "Article 14 of the Constitution of Pakistan guarantees the inviolability of the dignity of man...",
+    "sources": [
+      {
+        "law_name": "The Constitution of the Islamic Republic of Pakistan",
+        "year": "1973",
+        "section_number": "14",
+        "province": "Federal",
+        "section_text": "14. Inviolability of dignity of man, etc. (1) The dignity of man and, subject to law, the privacy of home, shall be inviolable..."
+      }
+    ]
+  }
+  ```
 
----
+## Testing
+To run the automated test suite, ensure your virtual environment is active and run:
+```bash
+python -m unittest discover tests
+```
 
-## ⚖️ Legal Disclaimer
+## Known Limitations
+* **Gemini API Quotas:** The application uses Google's `gemini-3.6-flash` model. If you are using a free-tier API key from Google AI Studio, you are strictly limited to roughly **20 requests per day**. If you exceed this, the API will fail to return a response, though the application will gracefully fall back to displaying the retrieved offline sources.
 
-This application is an educational software project and is **not intended to provide professional legal advice**. The answers generated are synthesized by AI based on a limited local dataset and may contain inaccuracies. Always consult a qualified, licensed attorney for legal matters and verified legal interpretations.
+## Disclaimer
+*This application is designed for educational and legal research purposes only. The information provided by the AI and the retrieved documents does not constitute formal legal advice. Please consult a qualified legal professional before acting upon any information provided by this tool.*

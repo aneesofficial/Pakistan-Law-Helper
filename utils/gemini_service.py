@@ -27,15 +27,18 @@ def init_gemini():
     if _client is None:
         _client = genai.Client(api_key=api_key)
 
-def generate_answer(prompt: str) -> str:
+def generate_answer(prompt: str, max_retries: int = 3, primary_model: str = "gemini-3.6-flash", fallback_model: str = "gemini-3.6-flash") -> str:
     """
     Generates a text answer using Gemini based on the provided prompt.
     Implements retries, exponential backoff, and a fallback model.
     """
     init_gemini()
     
+    # This account only has access to gemini-3.x generation models. 
+    # gemini-2.5-flash, gemini-2.5-flash-lite, and gemini-1.5-flash all return 404 for this API key. 
+    # Free tier limit for gemini-3.6-flash is 20 requests/day.
     primary_model = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
-    fallback_model = os.getenv("GEMINI_FALLBACK_MODEL", "gemini-2.5-flash")
+    fallback_model = os.getenv("GEMINI_FALLBACK_MODEL", "gemini-3.6-flash")
     
     max_retries = 3
     delay = 1.0
